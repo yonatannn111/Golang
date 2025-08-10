@@ -1,6 +1,11 @@
 package main
-import"fmt"
+
+import (
+	"fmt"
+	"strings"
+)
 func main() {
-	fmt.Println("Hello, World!")
-	fmt.Println("This is a simple Go program.")
+	var nameOne string="yoniti"
+	fmt.Println("Hello "+nameOne)
+	fmt.Println(strings)
 }
