@@ -2,10 +2,20 @@ package main
 
 import (
 	"fmt"
-	"strings"
+	"log"
+	"os"
+	"github.com/joho/godotenv"
+
 )
 func main() {
-	var nameOne string="yoniti"
-	fmt.Println("Hello "+nameOne)
-	fmt.Println(strings.ToUpper(nameOne)) // Example usage of strings package
+	fmt.Println("Hello, World! ")
+	godotenv.Load(".env")
+	portString:= os.Getenv("PORT") 
+	if portString ==""{
+		log.Fatal("PORT is not found in the environment")
+	}
+	fmt.Println("Port is set to:", portString)
 }
+
+
+	
